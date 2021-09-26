@@ -11,11 +11,9 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
                 "rerun:target/rerun.txt"
         },
-        // providing a ContentRoot path to the features package
         features = "src/test/resources/features",
-        // providing Source Root path to step_definitions package
-        glue = "com/cybertek/step_definitions",
-        dryRun = true,
+        glue = "com/amazon/step_definitions",
+        dryRun = false,
         tags = "@wip"
 )
 

@@ -9,8 +9,6 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
     @After
     public void tearDownScenario(Scenario scenario) {
-        // Scenario scenario - tracks info regarding the current scenario
-
         // if scenario failed, take a screen shot
         if(scenario.isFailed()) {
             byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -18,11 +16,8 @@ public class Hooks {
             // gets a screen shot as bytes
 
             scenario.attach(screenshot, "image/png", scenario.getName());
-            // scenario.attach() takes 3 args
-            // 1. screen shot array of bytes
-            // 2. image file type
-            // 3. name of the scenario
         }
+
         Driver.closeDriver();
     }
 }
