@@ -10,6 +10,6 @@ public class ResultsPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//div[@data-index='2'])[1]")
+    @FindBy(xpath = "//div[@data-index='8']")
     public WebElement firstResult;
 }
